@@ -68,8 +68,8 @@ if uploaded_file:
     dfs = df[['Personnel Name','InvoiceDate','Year', 'Month', 'Day', 'Hour', 'Mins',
            'WeekDay', 'WeekDayCase']]
     dfs.dropna(subset=['Personnel Name'],inplace = True)
-first_day = df["Day"].min()
-last_day = df["Day"].max()
+first_day = dfs["Day"].min()
+last_day = dfs["Day"].max()
 for name in dfs['Personnel Name'].unique():
     for day in range(first_day,last_day + 1 ,1):
             print("Name" + " " + dfs[dfs["Personnel Name"] == name]['Personnel Name'].unique()[0])
