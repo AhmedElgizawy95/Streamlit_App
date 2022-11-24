@@ -13,14 +13,28 @@ from PIL import Image
 
 
 # In[2]:
-page_bg_img = '''
-<style>
-.stApp{
-background-image: url("download2.jpg");
-background-size: cover;
-}
-</style>
-'''
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+    <style>
+    .stApp {
+    background-image: url("data:image/jpg;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
+set_background('download2.jpg')
+#page_bg_img = '''
+#<style>
+#.stApp{
+#background-image: url("download2.jpg");
+#background-size: cover;
+#}
+#</style>
+#'''
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 image = Image.open('download.jpg')
