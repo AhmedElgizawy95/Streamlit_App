@@ -70,8 +70,8 @@ if uploaded_file:
     dfs.dropna(subset=['Personnel Name'],inplace = True)
     first_day = dfs["Day"].min()
     last_day = dfs["Day"].max()
-for name in dfs['Personnel Name'].unique():
-    for day in range(first_day,last_day + 1 ,1):
+    for name in dfs['Personnel Name'].unique():
+        for day in range(first_day,last_day + 1 ,1):
             print("Name" + " " + dfs[dfs["Personnel Name"] == name]['Personnel Name'].unique()[0])
             Names.append(dfs[dfs["Personnel Name"] == name]['Personnel Name'].unique()[0])
             print("Start" + " " +str(dfs[(dfs["Personnel Name"] == name) & (dfs["Day"] == day)]['InvoiceDate'].min()))
