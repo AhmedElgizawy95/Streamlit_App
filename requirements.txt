@@ -1,4 +1,4 @@
 streamlit==1.14.0
 pandas==1.4.4
 openpyxl==3.0.10
-
+base==3.4
