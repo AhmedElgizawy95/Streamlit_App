@@ -99,8 +99,8 @@ with st.form(key="my_form"):
         st.dataframe(data[data["Names"] ==ab[0]])
 #st.dataframe(data[data["Names"] == ab])
  #In[24]:
-csv = data.to_csv(index=False)
-st.download_button(label='Download',data=csv,file_name='AAA.csv',mime='text/csv')
+csv = data.to_csv(index=False,encoding="UTF-8")
+st.download_button(label='Download',data=csv,file_name='AR.csv',mime='text/csv')
 
 #st.download_button('Download',)
 # dataM = data.to_excel('states.xlsx', sheet_name = "states", index = False)
