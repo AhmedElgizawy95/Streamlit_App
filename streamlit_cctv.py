@@ -15,7 +15,7 @@ from PIL import Image
 # In[2]:
 page_bg_img = '''
 <style>
-body {
+.stApp{
 background-image: url("download2.jpg");
 background-size: cover;
 }
