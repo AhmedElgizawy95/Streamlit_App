@@ -99,7 +99,7 @@ with st.form(key="my_form"):
         st.dataframe(data[data["Names"] ==ab[0]])
 #st.dataframe(data[data["Names"] == ab])
  #In[24]:
-csv = data.to_csv(index=False,encoding="UTF-8")
+csv = data.to_csv(index=False,encoding="utf-8-sig")
 st.download_button(label='Download',data=csv,file_name='AR.csv',mime='text/csv')
 
 #st.download_button('Download',)
