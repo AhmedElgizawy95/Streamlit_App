@@ -18,15 +18,14 @@ def set_background(png_file):
     page_bg_img = '''
     <style>
     .stApp {
-    background-image: url("data:image/jpg;base64,%s");
+    background-image: url("data:image/png;base64,%s");
     background-size: cover;
     }
     </style>
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-
-set_background('download2.jpg')
+set_background('download2.png')
 #page_bg_img = '''
 #<style>
 #.stApp{
@@ -36,9 +35,9 @@ set_background('download2.jpg')
 #</style>
 #'''
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
-image = Image.open('download.jpg')
-st.image(image, use_column_width=200)
+#st.markdown(page_bg_img, unsafe_allow_html=True)
+#image = Image.open('download.jpg')
+#st.image(image, use_column_width=200)
 
 
 
